@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Transcripción de Audio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Validación de Transcripción de Audio</h1>
+        <div class="audio-player">
+            <audio id="audio-element" controls>
+                <source src="path_to_your_audio_file.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <p>Reproducir audio:</p>
+        <div class="transcription-area">
+            <div class="transcription-box">
+                <h2>Transcripción inicial (Whisper):</h2>
+                <textarea id="initial-transcription" readonly>Texto transcrito por Whisper...</textarea>
+            </div>
+            <div class="transcription-box">
+                <h2>Corrección de la transcripción:</h2>
+                <textarea id="corrected-transcription" placeholder="Ingresa el texto corregido aquí..."></textarea>
+            </div>
+        </div>
+        <div class="report-problem">
+            <h2>Reportar problema con el audio:</h2>
+            <select id="problem-report">
+                <option value="">Selecciona una opción</option>
+                <option value="no-audio">No se escucha el audio</option>
+                <option value="low-quality">Calidad de audio baja</option>
+                <option value="wrong-language">Idioma incorrecto</option>
+                <option value="other">Otro problema</option>
+            </select>
+        </div>
+        <button id="submit-correction">Enviar Corrección</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
